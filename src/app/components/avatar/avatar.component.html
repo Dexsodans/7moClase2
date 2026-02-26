@@ -1,5 +1,10 @@
 <div class="container">
-    <h2>Avatar</h2>
+    <h1>Avatar</h1>
+    <div>
+        <h3>Ingresa el nombre para la carita ajkdsa</h3>
+        <input type="text" #nombreInput>
+        <button (click)="cambiarNombre(nombreInput.value)">Guardar</button>
+    </div>
     <div class="canvas-avatar">
         <div class="cuerpo"
         [style.background-color]="colorFondo()"
@@ -21,7 +26,9 @@
             }
         </div>            
         </div>
+        
     </div>
+    <h1 [style.color]="colorFondo()">{{ nombre() }}</h1>
     <div class="controles">
         <label > Color </label>
         <input type="color" [value]="colorFondo()" (input)="cambiarColor($event)">

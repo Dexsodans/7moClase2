@@ -13,6 +13,7 @@ colorFondo = signal<string>('#117187');
 tamano = signal<number>(150);
 tieneLentes = signal<boolean>(false);
 tipoExpresion = signal<number>(1);
+nombre = signal<string>('');
 
 cambiarTamano(event: Event){
 const input = event.target as HTMLInputElement;
@@ -31,5 +32,10 @@ this.tieneLentes.update(flag => !flag);
 cambiarExpresion(tipo: number){
 this.tipoExpresion.set(tipo);
 };
+
+cambiarNombre(nombre: string){
+this.nombre.set(nombre);
+};
+
 
 }
