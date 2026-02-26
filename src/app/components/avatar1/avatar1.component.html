@@ -7,6 +7,8 @@
     </div>
     <div class="canvas-avatar">
         <div class="cuerpo"
+        [class.girando]="girando()"
+        [class.girando2]="girando2()"
         [style.background-color]="colorFondo()"
         [style.width.px]="tamano()"
         [style.height.px]="tamano()"
@@ -28,7 +30,10 @@
         </div>
         
     </div>
+    
     <h1 [style.color]="colorFondo()">{{ nombre() }}</h1>
+
+
     <div class="controles">
         <label > Color </label>
         <input type="color" [value]="colorFondo()" (input)="cambiarColor($event)">
@@ -42,6 +47,8 @@
         <button (click)="cambiarExpresion(1)">Feliz</button>
         <button (click)="cambiarExpresion(2)">Sorprendido</button>
         <button (click)="cambiarExpresion(3)">Serio</button>
-        
+        <label>Girar</label>
+        <button (click)="toggleGirar($event)">{{girando() ? 'Detener' : 'Girar'}}</button>
+        <button (click)="toggleGirar2($event)">{{girando2() ? 'Detener' : 'Girar EJE X'}}</button>
     </div>
 </div>

@@ -15,6 +15,8 @@
       position: relative;
       transition: all 0.3s ease;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      background-color: radial-gradient(circle at 30% 30%, #5cabff, #000); /* Efecto 3D */
+
 
       .ojos {
         display: flex;
@@ -64,4 +66,22 @@
     label, p { font-weight: bold; font-size: 14px; }
     button { cursor: pointer; padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
   }
+  @keyframes girar {
+    from { transform: rotate(0deg);}
+    to   { transform: rotate(360deg);}
+  }
+  @keyframes girar2 {
+    from { transform: rotateX(0deg);}
+    to   { transform: rotateX(360deg);}
+  }
+
+  .girando {
+    animation: girar 4s linear infinite;
+    transform-style: preserve-3d;
+  }
+  .girando2 {
+    animation: girar2 4s linear infinite;
+    transform-style: preserve-3d;
+  }
+  
 }
